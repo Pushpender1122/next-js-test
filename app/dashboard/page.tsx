@@ -11,6 +11,7 @@ const page = () => {
             dashboard
             sdf
             < br />
+            This is how thing are working
             {search}
         </div >
     )
