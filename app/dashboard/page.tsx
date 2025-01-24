@@ -9,9 +9,10 @@ const page = () => {
     return (
         <div>
             dashboard
-            <br />
+            sd
+            < br />
             {search}
-        </div>
+        </div >
     )
 }
 
