@@ -12,6 +12,7 @@ const page = () => {
             sdf
             < br />
             this is my code
+            This is how thing are working
             {search}
         </div >
     )
