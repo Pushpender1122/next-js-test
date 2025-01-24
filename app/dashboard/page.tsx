@@ -9,7 +9,7 @@ const page = () => {
     return (
         <div>
             dashboard
-            sd
+            sdf
             < br />
             {search}
         </div >
