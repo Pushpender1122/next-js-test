@@ -1,19 +1,15 @@
-import axios from "axios"
+import Showdata from '@/components/Showdata'
+import React, { Suspense } from 'react'
+import Loading from './loading'
 
-const Home = async () => {
-  const { data } = await axios.get('https://randomuser.me/api/?page=1&results=2&seed=abc');
-  console.log(data);
+const Page = () => {
   return (
-    <>
-      {data.results.map((user: any) => (
-        <div key={user.login.uuid}>
-          <img src={user.picture.large} alt={user.name.first} />
-          <p>{user.name.first} {user.name.last}</p>
-          <p>{user.email}</p>
-          <p>{user.phone}</p>
-        </div>
-      ))}
-    </>
+    <div>
+      <Suspense fallback={<Loading />}>
+        <Showdata />
+      </Suspense>
+    </div>
   )
 }
-export default Home
+
+export default Page
