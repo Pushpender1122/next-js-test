@@ -1,33 +1,18 @@
-'use client'
-import Todos from '@/components/Todos'
-import { Todo } from '@/model/Todo'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-const Home = () => {
-  const [todos, setTodos] = useState<Todo[]>([])
-  const [todoState, setTodoState] = useState<string>("")
+import axios from "axios"
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    // setTodos()
-    e.preventDefault()
-    setTodos([...todos, { id: Date.now(), Name: todoState, isValid: false }])
-    setTodoState('')
-
-  }
-
+const Home = async () => {
+  const { data } = await axios.get('https://randomuser.me/api/?page=1&results=2&seed=abc');
+  console.log(data);
   return (
     <>
-      <div className='flex justify-center items-center h-40'>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <input className='mr-3 text-black' type="text" placeholder={"Enter Todos"} value={todoState} onChange={(e) => setTodoState(e.target.value)} />
-          <button type='submit'>Add todos</button>
-          <Link href={{
-            pathname: '/dashboard',
-            query: { data: todoState }
-          }} > Go to dashBoard</Link>
-        </form>
-      </div>
-      <Todos todos={todos} setTodos={setTodos} />
+      {data.results.map((user: any) => (
+        <div key={user.login.uuid}>
+          <img src={user.picture.large} alt={user.name.first} />
+          <p>{user.name.first} {user.name.last}</p>
+          <p>{user.email}</p>
+          <p>{user.phone}</p>
+        </div>
+      ))}
     </>
   )
 }
