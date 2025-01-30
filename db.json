@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "ea6f",
+      "name": "cipher",
+      "uploadUrl": "http://localhost:3000/uploads/cipher.png"
+    },
+    {
+      "id": "9c79",
+      "name": "hac",
+      "uploadUrl": "http://localhost:3000/uploads/hac.png"
+    },
+    {
+      "id": "a1c4",
+      "name": "vikas",
+      "uploadUrl": "http://localhost:3000/uploads/vikas.png"
+    },
+    {
+      "id": "3f27",
+      "name": "hjfj",
+      "uploadUrl": "http://localhost:3000/uploads/hjfj.png"
+    }
+  ]
+}

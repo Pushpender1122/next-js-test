@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getDataFromapi } from "@/app/action/getData";
+import { getDataFromapi } from "@/app/action/actions";
 import Loading from "@/app/loading";
 
 const Showdata = () => {

@@ -1,13 +1,9 @@
-import Showdata from '@/components/Showdata'
-import React, { Suspense } from 'react'
-import Loading from './loading'
-
+import Userform from '@/components/Userform'
+import React from 'react'
 const Page = () => {
   return (
     <div>
-      <Suspense fallback={<Loading />}>
-        <Showdata />
-      </Suspense>
+      <Userform />
     </div>
   )
 }
