@@ -1,10 +1,7 @@
 import React from 'react'
 import { getUserData } from '../action/actions';
-interface User {
-    id: string;
-    name: string;
-    uploadUrl: string;
-}
+import { User } from '@/model/User';
+
 const Page = async () => {
     const data = await getUserData();
     return (

@@ -21,7 +21,7 @@ const UserForm = () => {
             return;
         }
         if (image) {
-            const isUploaded = await uploadImage(image, name);
+            const isUploaded = await uploadImage(image, name); // one more argument for date 
             if (isUploaded) {
                 alert("Image uploaded successfully");
             }

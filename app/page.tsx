@@ -1,9 +1,11 @@
-import Userform from '@/components/Userform'
+// import Userform from '@/components/Userform'
+import BirthdayInput from '@/components/BirthdayInput'
 import React from 'react'
 const Page = () => {
   return (
     <div>
-      <Userform />
+      {/* <Userform /> */}
+      <BirthdayInput />
     </div>
   )
 }
